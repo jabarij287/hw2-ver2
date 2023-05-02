@@ -1,0 +1,141 @@
+<!--
+Name: Jabari Johnson 
+ Course:	  235.02
+ Homework:	  #2
+ Git-Hub https://github.com/jabarij287/hw2-ver2.git
+  -->	 	 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Yahtzee</title>
+    <style>
+    <!--
+    h1{
+        font-size: 30pt;
+        text-align: center;
+    }
+    div.a {
+        text-align: center;
+    }
+    table { 
+        margin-left: auto;
+        margin-right: auto;
+    }
+    td.a {
+        text-align: right;
+    }
+    td.b{ 
+        border: 1px outset #676767; 
+        background-color: #aeaeff;
+        width: 2em;
+    }
+    td.c{ width: 100px; 
+          margin: auto;
+    }
+    
+button.a{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16pt;
+    background-color: #5701ce;
+    color: #f4d6e8;
+    
+}
+
+    </style>
+    </head>
+    <body>
+        <script language="javascript">
+<!--
+ var d = new Array(0,0,0,0,0);
+var x = new Array(false,false,false,false,false);
+var f = new Array(0,0,0,0,0,0,0);
+
+function roll()
+{
+    f[1]=f[2]=f[3]=f[4]=f[5]=f[6]=0;
+for(var i=0;i<5;i++)
+  {      
+    if(!x[i]){
+    var t = document.getElementById("d"+i);
+    f[i]=Math.floor(6*Math.random())+1;
+    t.src="pix/dice"+f[i]+".gif";
+    d[i]=f[i]
+    }
+    }
+
+}
+function h (i)
+{
+    var t = document.getElementById("d"+i);
+    x[i]= !x[i];
+    console.log(d[i])
+    if(x[i])
+    {t.src="pix/diceX"+d[i]+".gif";}
+    else
+    {t.src="pix/dice"+d[i]+".gif";}
+}
+ function scr(k)
+ {
+    document.getElementById("s"+k).innerHTML=f[k]*k;
+ }
+ function newgame()
+    {
+    f[1]=f[2]=f[3]=f[4]=f[5]=f[6]=0;
+for(var i=0;i<5;i++)
+  {      
+    x[i]=false
+    var t = document.getElementById("d"+i);
+    t.src="pix/dice0.gif";
+    }
+    
+
+ }          
+ -->
+    </script>
+        <h1> Yahtzee </h1>
+        <div class="a">
+            <img Id="d0" onClick="h(0)"src="pix/dice0.gif">
+            <img Id="d1" onClick="h(1)"src="pix/dice0.gif">
+            <img Id="d2" onClick="h(2)"src="pix/dice0.gif">
+            <img Id="d3" onClick="h(3)"src="pix/dice0.gif">
+            <img Id="d4" onClick="h(4)"src="pix/dice0.gif">
+        </div>
+<table>
+    <tr>
+        <td class="a">1's</td><td class="b"></td><td rowspan="5"></td>
+    </tr>
+    <tr>
+        <td class="a">2's</td><td class="b"></td><td rowspan="5"></td>
+        <td class="c" rowspan="5"><button class="a" onclick="roll()">Roll</button></td>
+    </tr>
+    <tr>
+        <td class="a">3's</td><td class="b"></td><td rowspan="5"></td>
+    </tr>
+    <tr>
+        <td class="a">4's</td><td class="b"></td><td rowspan="5"></td>
+    </tr>
+    <tr>
+        <td class="a">5's</td><td class="b"></td><td rowspan="5"></td>
+    </tr>
+    <tr>
+        <td class="a">6's</td><td class="b"></td><td rowspan="5"></td>
+    </tr>
+    <tr>
+        <td class="a">3 of a kind</td><td class="b"></td><td rowspan="5"></td>
+        <td class="c" rowspan="5"><button class="a" onclick=" newgame()">New game</button></td>
+    </tr>
+    <tr>
+        <td class="a">4 of a kind</td><td class="b"></td><td rowspan="5"></td>
+    </tr> 
+    <tr>
+        <td class="a">Yahtzee</td><td class="b"></td><td rowspan="5"></td>
+    </tr>
+    <tr>
+        <td class="a">total</td><td class="b"></td><td rowspan="5"></td>
+    </tr>
+</table>
+    
+</body>
+</html>
+
